@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Video Player</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/video-player.css"/>
+      <script type="text/javascript" src='js/video-player.js'></script>
+  </head>
+<body>
+<div id = 'video-player'>
+    <div class="video-player-main">
+        <div class = "video-player-left">
+            <div class="video-player-header">
+                <div class="header-name">Vedio Player</div>
+            </div>
+            <!-- video -->
+            <video id='video'>
+                <source src='http://maoyan.meituan.net/movie/videos/ad429561494a4eb09de1c007f037c847.mp4' type='video/mp4'>
+            </video>
+        </div>
+        <!-- play list -->
+        <div id='video-player-list'>
+            <div class="video-player-list-header">
+                <div class="play-list-name">Play List</div>
+            </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" onclick='loadVideo("http://maoyan.meituan.net/movie/videos/ad429561494a4eb09de1c007f037c847.mp4");'>Online-1</li>
+                    <li class="list-group-item" onclick='loadVideo("video/video1.mp4");'>Video-1</li>
+                    <li class="list-group-item" onclick='loadVideo("video/video2.mp4");'>Video-2</li>
+                    <li class="list-group-item" onclick='loadVideo("video/video3.mp4");'>Video-3</li>
+                </ul>
+        </div>
+        <div>
+            <!-- progress bar -->
+            <div class="progress">
+                <div id='progress-bar' class="progress-bar bg-dark progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <!-- video-controls -->
+            <div class='video-controls'>
+                <button type='button' id='replay-button' class='btn success' onclick='replayVideo();'><em class="fas fa-reply"></em></button>
+                <button type="button" id='play-pause-button' class="btn success"  onclick='togglePlayPause();'><em id="play-pause-icon" class="far fa-play-circle"></em></button>
+                <button type='button' id='stop-button' class='btn success' onclick='stopPlayer();'><em class='fas fa-stop-circle'></em></button>
+                <button type='button' id='volume-inc-button' class='btn success' onclick='changeVolume("+");'><em class="fas fa-plus-circle"></em></button>
+                <button type='button' id='volume-dec-button' class='btn success' onclick='changeVolume("-");'><em class="fas fa-minus-circle"></em></button>
+                <button type='button' id='mute-button' class='btn success' onclick='toggleMute("true");'><em id='mute-icon' class="fas fa-volume-up"></em><span id='video-volume' class="badge badge-light" style="color: lightblue;"></span></button>
+                <button type='button' id='like-button' class='btn success' onclick='likeVideo()'><em class="far fa-thumbs-up"></em><span id='video-like' class="badge badge-light" style="color: green;"></span></button>
+                <button type='button' id='unlike-button' class='btn success' onclick='unlikeVideo()'><em class="far fa-thumbs-down"></em><span id='video-unlike' class="badge badge-light" style="color: red;"></span></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
