@@ -1,0 +1,13 @@
+<div>
+
+
+  <!-- video-controls -->
+  <div class='video-controls'>
+    <button type='button' id='replay-button' class='btn success' (click)='replayMedia()'><em class="fas fa-reply"></em></button>
+    <button type="button" id='play-pause-button' class="btn success"  (click)='togglePlayPause()'><em id="play-pause-icon" class="far fa-play-circle"></em></button>
+    <button type='button' id='stop-button' class='btn success' (click)='stopPlayer()'><em class='fas fa-stop-circle'></em></button>
+    <button type='button' id='volume-inc-button' class='btn success' (click)='changeVolume("+")'><em class="fas fa-plus-circle"></em></button>
+    <button type='button' id='volume-dec-button' class='btn success' (click)='changeVolume("-")'><em class="fas fa-minus-circle"></em></button>
+    <button type='button' id='mute-button' class='btn success' (click)='toggleMute()'><em id='mute-icon' class="fas fa-volume-up"></em><span id='video-volume' class="badge badge-light" style="color: lightblue;"></span></button>
+  </div>
+</div>

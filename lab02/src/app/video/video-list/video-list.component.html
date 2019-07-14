@@ -1,0 +1,9 @@
+<!-- play list -->
+<div id='video-player-list'>
+  <div class="video-player-list-header">
+    <div class="play-list-name">Play List</div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let video of videos; index as i">{{video.title}}</li>
+  </ul>
+</div>

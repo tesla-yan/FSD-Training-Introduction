@@ -1,0 +1,19 @@
+<div id = 'video-player'>
+  <div class="video-player-main">
+    <div class = "video-player-left">
+      <div class="video-player-header">
+        <div class="header-name">Vedio Player</div>
+      </div>
+      <!-- app-video-view -->
+      <app-video-view #videoView></app-video-view>
+    </div>
+
+    <!-- app-video-list -->
+    <app-video-list [videos]="videos"></app-video-list>
+
+    <!-- app-video-control -->
+    <div>
+      <app-video-control [videoView]="videoView"></app-video-control>
+    </div>
+  </div>
+</div>
